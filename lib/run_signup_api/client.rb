@@ -1,12 +1,11 @@
 require 'httparty'
 
-module RunSignup
+module RunSignupApi
   class Client
     include HTTParty
 
     BASE_URL = "https://runsignup.com/rest"
 
-    # RunSignup::Client.new
     def initialize api_key: ENV['RUN_SIGNUP_API_KEY'], api_secret: ENV['RUN_SIGNUP_API_SECRET'], response_format: :json
       @api_key, @api_secret, @response_format = api_key, api_secret, response_format
     end

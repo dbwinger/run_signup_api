@@ -1,3 +1,5 @@
 require 'ostruct'
 
-class RunSignup::Race < OpenStruct; end;
+module RunSignup
+  class Race < OpenStruct; end;
+end

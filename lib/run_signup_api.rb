@@ -1,10 +1,10 @@
 if ENV['ENV'] == 'development'
   require 'dotenv/load'
 end
-require 'run_signup/version'
+require 'run_signup_api/version'
 require 'run_signup/race'
-require 'run_signup/client'
+require 'run_signup_api/client'
 
-module RunSignup
+module RunSignupApi
   class Error < StandardError; end
 end

@@ -3,11 +3,11 @@ lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 # $:.unshift File.expand_path('../lib', __FILE__)
-require 'run_signup/version'
+require 'run_signup_api/version'
 
 Gem::Specification.new do |s|
   s.name          = 'run_signup_api'
-  s.version       = RunSignup::VERSION
+  s.version       = RunSignupApi::VERSION
   s.authors       = ['dbwinger']
   s.email         = ['daryl@entrision.com']
   s.homepage      = 'https://github.com/dbwinger/run_signup_api'
