@@ -1,11 +1,11 @@
 # encoding: utf-8
 
 $:.unshift File.expand_path('../lib', __FILE__)
-require 'run_signup_api/version'
+require 'run_signup/version'
 
 Gem::Specification.new do |s|
   s.name          = 'run_signup_api'
-  s.version       = RunSignupApi::VERSION
+  s.version       = RunSignup::VERSION
   s.authors       = ['dbwinger']
   s.email         = ['daryl@entrision.com']
   s.homepage      = 'https://github.com/dbwinger/run_signup_api'
@@ -16,4 +16,9 @@ Gem::Specification.new do |s|
   s.files         = Dir.glob('{bin/*,lib/**/*,[A-Z]*}')
   s.platform      = Gem::Platform::RUBY
   s.require_paths = ['lib']
+
+  s.add_development_dependency 'rspec', '~> 3.9'
+  s.add_development_dependency 'dotenv', '~> 2.7'
+
+  s.add_dependency 'httparty'
 end

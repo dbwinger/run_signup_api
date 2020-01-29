@@ -6,3 +6,5 @@ Gemfile.lock
 .env
 rdoc
 tmp
+.ruby-version
+.ruby-gemset
