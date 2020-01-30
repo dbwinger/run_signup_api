@@ -2,7 +2,6 @@
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
-# $:.unshift File.expand_path('../lib', __FILE__)
 require 'run_signup_api/version'
 
 Gem::Specification.new do |s|
@@ -21,6 +20,7 @@ Gem::Specification.new do |s|
 
   s.add_development_dependency 'rspec', '~> 3.9'
   s.add_development_dependency 'dotenv', '~> 2.7'
+  s.add_development_dependency 'byebug'
 
   s.add_dependency 'httparty'
 end
