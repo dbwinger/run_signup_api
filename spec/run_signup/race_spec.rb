@@ -6,7 +6,7 @@ describe RunSignup::Race do
     let(:hash) { { raw: 'hash' } }
 
     it 'coerces hash values' do
-      expect_any_instance_of(RunSignup::Race).to receive(:coerce_hash_values).with(hash) { { coerced: 'values'} }
+      expect_any_instance_of(RunSignup::Race).to receive(:coerce_from_api).with(hash) { { coerced: 'values'} }
 
       expect(subject.to_h).to eq( { coerced: 'values' })
     end

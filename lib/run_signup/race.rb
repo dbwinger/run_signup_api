@@ -7,7 +7,9 @@ module RunSignup
     include RunSignup::DataCoercion
 
     def initialize hash = nil
-      super coerce_hash_values hash
+      super coerce_from_api hash
     end
   end
+
+  class Event < OpenStruct; end;
 end

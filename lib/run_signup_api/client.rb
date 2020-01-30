@@ -3,6 +3,7 @@ require 'httparty'
 module RunSignupApi
   class Client
     include HTTParty
+    include RunSignup::DataCoercion
 
     BASE_URL = "https://runsignup.com/rest"
 
@@ -57,7 +58,10 @@ module RunSignupApi
     protected
 
     def call_api path, params = {}
-      response = self.class.get("#{BASE_URL}/#{path}", query: default_params.merge(params))
+      response = self.class.get(
+        "#{BASE_URL}/#{path}", 
+        query: default_params.merge(coerce_for_api params)
+      )
       if response.code == 200
         response = response.parsed_response
 
